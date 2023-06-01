@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Usage chart showing all available scan types
-usage() {
+usage() 
+{
     echo "Usage: $0 <target> <scan_type1> [<scan_type2> ...]"
     echo "Available scan types:"
     echo "  hosts         Host Discovery scan"
@@ -30,7 +31,8 @@ declare -A SCAN_TYPES=(
 )
 
 # Prints header
-print_header() {
+print_header() 
+{
     local scan_type=$1
     local len=${#scan_type}
     local terminal_width=$(tput cols)
