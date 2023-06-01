@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Usage chart showing all available scan types
-usage() 
-{
+usage() {
     echo "Usage: $0 <target> <scan_type1> [<scan_type2> ...]"
     echo "Available scan types:"
     echo "  hosts         Host Discovery scan"
@@ -20,8 +19,7 @@ usage()
 # To add more scan types the following template can be used
 # ["<scan name>"]="<nmap arguements>"
 # Make sure to update the usage chart at the top
-declare -A SCAN_TYPES=
-(
+declare -A SCAN_TYPES=(
     ["hosts"]="-sn -PR -T4"
     ["basic"]="-p- -T4"
     ["full"]="-sV -A -O -T4 -p- -Pn -T4"
